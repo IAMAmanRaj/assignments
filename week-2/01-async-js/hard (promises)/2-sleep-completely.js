@@ -5,6 +5,16 @@
  */
 
 function sleep(milliseconds) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, milliseconds);
+  });
 }
+
+async function main(n) {
+  console.log(" going to sleep/busy wait for " + `${n}` + " seconds");
+  await sleep(n * 1000);
+  console.log("After" + `${n}`, "seconds");
+}
+//function call for ex.=> main(4);
 
 module.exports = sleep;
