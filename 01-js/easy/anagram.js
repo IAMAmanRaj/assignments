@@ -12,10 +12,10 @@ function isAnagram(str1, str2) {
   let n2 = str2.length;
 
   if (n1 != n2) return false;
-
+  
   sorted1 = str1.split("").sort().join(""); //sorts the array of  chars;
   sorted2 = str2.split("").sort().join("");
-
+  
   return sorted1 === sorted2;
 }
 
